@@ -1,0 +1,72 @@
+//评测题目: 无
+1、请写出console结果
+setImmediate(function(){
+    console.log(6);
+});
+new Promise(
+     function(resolve){
+         console.log(1)
+         for( var i=0 ; i<10000 ; i++ ){
+             i==9999 && resolve()
+         }
+         console.log(2)
+     }
+).then(function(){
+    console.log(5)
+});
+setTimeout(function(){console.log(4)},0);
+console.log(3);
+---
+  6 1 5 2 4 3
+  
+
+
+
+2、两个有序数组合并成一个有序数组(不要直接用.sort方法)
+var arr1 = [1,2,5,6,8];
+var arr2 = [3,4,7];
+function concatArr(arr1, arr2) {
+	
+}
+
+
+3、12345678 ——> 12,345,678
+var str = '12345678';
+function joinStr(str){
+  for(var i=0;i<str.length;i++){
+  	
+  }
+	
+}
+
+4、类数组对象，转化成数组
+
+
+5、三种方法写一下数组去重
+A、
+var arr = [1,2,1,4,4,6,5]
+   var arr1 = new Set(arr)
+  
+B、
+function  fn(arr){
+		var newArr = [];
+  		arr.forEach(
+          (item) => {
+        		if(newArr.indexOf(item) === -1){
+                		newArr.push(item);
+                }	
+        })
+      return newArr; 
+}
+
+C、
+function fn1(){
+	for(var i=0;i < arr.length;i++){
+		for(var j=i+1;j<arr.length;j++)
+        	if(arr[i] == arr[j]){
+            	arr.splice(j,1);
+            }
+    }
+}
+6、实现继承
+
